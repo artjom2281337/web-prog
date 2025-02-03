@@ -21,7 +21,9 @@ $var4 = 50;
 echo "<br/>Sum of var3 and var4 is ". $var3+$var4;
 ?>
 
-
-<meta name="description" content="<?php if(isset($metadesc) && !empty($metadesc)) (echo $metadesc) else (echo "nah";)?>;">
-$title
-<title><?php if(isset($title) && !empty($title)) (echo $title;) else (echo "smth default")  ?></title>
+<br>
+<!-- 
+    <meta name="description" content=" <?php // if(isset($metadesc) && !empty($metadesc)) (echo $metadesc) else (echo "nah";)?>
+    $title
+    <title><?php  // if(isset($title) && !empty($title)) (echo $title;) else (echo "smth default")  ?> </title>
+-->
