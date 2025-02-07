@@ -1,10 +1,10 @@
 <?php include 'db.php' ;
-$fname= $_POST['fname'];
-$lname= $_POST['lname'];
+$fname= $_POST['first_name'];
+$lname= $_POST['last_name'];
 $city= $_POST['city'];
-$groupid= $_POST['groupid'];
-$sql="insert into studentsinfo (fname, lname, city, groupid)
-values('$fname', '$lname', '$city', '$groupid')";
+$groupid= $_POST['groupId'];
+$sql="INSERT INTO studentsinfo (first_name, last_name, city, groupId)
+VALUES('$fname', '$lname', '$city', '$groupid')";
 
 if($conn->query($sql) === TRUE) {
     echo "New record added";
