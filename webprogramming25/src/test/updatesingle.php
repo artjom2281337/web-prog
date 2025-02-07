@@ -1,12 +1,12 @@
 <?php
 include 'db.php';
-$a = $_GET['id'];
-$result = mysqli_query($conn,"SELECT * FROM studentsinfo WHERE id= '$a'");
+$a = $_GET['userid'];
+$result = mysqli_query($conn,"SELECT * FROM users WHERE userid= '$a'");
 $row= mysqli_fetch_array($result);
 ?>
 <html>
 <head>
-<title>Update Employee Data</title>
+<title>Update Data</title>
 </head>
 <body>
 <form method="post" action="">
@@ -18,14 +18,15 @@ First Name: <br>
 Last Name :<br>
 <input type="text" name="lname" value="<?php echo $row['lname']; ?>">
 <br>
-City:<br>
-<input type="text" name="city" value="<?php echo $row['city']; ?>">
+Email:<br>
+<input type="text" name="email" value="<?php echo $row['email']; ?>">
 <br>
-Group ID:<br>
-<select name="groupid"> 
-    <option value="BBCAP19"> BBCAP19 </option>
-    <option value="BBCAP20"> BBCAP20 </option>
-    <option value="Others"> Others </option>
+Password:<br>
+<input type="text" name="password" value="<?php echo $row['password']; ?>">
+IsCorp:<br>
+<select name="iscorp"> 
+    <option value="1"> Yes </option>
+    <option value="0"> No </option>
 </select>
 <br>
 
@@ -35,7 +36,7 @@ Group ID:<br>
 if($_POST['submit']){
     
     $fname = $_POST['fname'];
-    $query = mysqli_query($conn,"UPDATE studentsinfo set fname='$fname' where id='$a'");
+    $query = mysqli_query($conn,"UPDATE users set fname='$fname' where userid='$a'");
     if($query){
         echo "Record Modified Successfully <br>";
         echo "<a href='update.php'> Check your updated List </a>";

@@ -1,12 +1,12 @@
 <?php
 include 'db.php';
 $a = $_GET['id'];
-$result = mysqli_query($conn,"SELECT * FROM studentsinfo WHERE id= '$a'");
+$result = mysqli_query($conn,"SELECT * FROM users WHERE userid= '$a'");
 $row= mysqli_fetch_array($result);
 ?>
 <html>
 <head>
-<title>Update Employee Data</title>
+<title>Update User Data</title>
 </head>
 <body>
 <form method="post" action="">
@@ -18,11 +18,14 @@ First Name: <br>
 Last Name :<br>
 <input type="text" name="lname" value="<?php echo $row['lname']; ?>">
 <br>
-City:<br>
-<input type="text" name="city" value="<?php echo $row['city']; ?>">
-<br>
 Email:<br>
-<input type="text" name="groupid" value="<?php echo $row['groupid']; ?>">
+<input type="text" name="email" value="<?php echo $row['email']; ?>">
+<br>
+Password:<br>
+<input type="text" name="password" value="<?php echo $row['password']; ?>">
+<br>
+IsCorp :<br>
+<input type="text" name="iscorp" value="<?php echo $row['iscorp']; ?>">
 <br>
 
 <input type="submit" name="submit" value="Delete" >
@@ -31,9 +34,9 @@ Email:<br>
 if($_POST['submit']){
     
     $fname = $_POST['fname'];
-    $query = mysqli_query($conn,"DELETE FROM studentsinfo where id='$a'");
+    $query = mysqli_query($conn,"DELETE FROM users where userid='$a'");
     if($query){
-        echo "Record Deleted with id: $a <br>";
+        echo "Record Deleted with userid: $a <br>";
         echo "<a href='update.php'> Check your updated List </a>";
         // if you want to redirect to update page after updating
         //header("location: update.php");

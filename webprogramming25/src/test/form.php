@@ -1,13 +1,12 @@
-<form name= "form1" method="post" action="create_users.php">
+<form name= "form1" method="post" action="create.php">
     First Name: <input type="text" name="fname"><br>
     Last Name: <input type="text" name="lname"><br>
-    email: <input type="text" name="email"><br>
-    password: <input type="text" name="pass"><br>
-    corpcus:
-    Choose Group ID:
+    E-mail: <input type="text" name="email"><br>
+    Password: <input type="text" name="password">
+    Is Corporated:
     <select name="corp_cus"> 
-    <option value="true"> Yes </option>
-    <option value="false"> No </option>
+    <option value="1"> Yes </option>
+    <option value="0"> No </option>
 </select>
 <br>
 <input type="submit" value="Save Data">
