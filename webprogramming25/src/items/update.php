@@ -21,7 +21,7 @@ $result = $conn->query($sql);?>
 <hr>
 <table border="1" cellpadding="5">
 <tr>
-<th>itemID</th><th>userID</th><th>Item Name</th><th>Image</th>
+<th>itemID</th><th>Item Name</th><th>Image</th>
 <th>Price</th><th>Price_Kilo</th> <th>Type</th>
 <th>Country</th><th>Company</th><th>Ingredients</th>
 <th>Allergies</th>
@@ -32,12 +32,11 @@ if($result ->num_rows > 0) {
 ?>
 <tr>
 <td><?php echo $row["itemid"]; ?></td>
-<td><?php echo $row["userid"]; ?></td>
 <td><?php echo $row["item_name"]; ?></td>
 <td><?php echo $row["img"]; ?></td>
 <td><?php echo $row["price"]?> <?php echo "€"; ?></td>
 <td><?php echo $row["price_kilo"]?> <?php echo "€";?></td>
-<td><?php echo $row["type"]; ?></td>
+<td><?php echo $row["item_type"]; ?></td>
 <td><?php echo $row["country"]; ?></td>
 <td><?php echo $row["company"]; ?></td>
 <td><?php echo $row["ingred"]; ?></td>

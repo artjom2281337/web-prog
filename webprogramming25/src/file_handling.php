@@ -67,7 +67,7 @@ else
     // FLOCK(): queues up all other requests for accessing a file until your program releases the lock.
     // It is used when, for instance, several users try to access the same file.
 
-    /*
+    
     // open the file r+ : reading & writing
     $file = fopen('file.txt', 'r+') or die('Failed to open the file.');
     // fgets() to read single line in the file
@@ -84,7 +84,7 @@ else
         echo "Unable to lock the file.";
         fclose($file);
     }
-    */
+    
 
     /* ********************************************************* DIY
     echo "<hr><h2> Reading from a remote file.</h2>";

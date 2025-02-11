@@ -25,7 +25,7 @@ Price for kilo:<br>
 <input type="text" name="price_kilo" value="<?php echo $row['price_kilo']; ?>">
 <br>
 Type:<br>
-<input type="text" name="type" value="<?php echo $row['type']; ?>">
+<input type="text" name="item_type" value="<?php echo $row['item_type']; ?>">
 <br>
 Country :<br>
 <input type="text" name="country" value="<?php echo $row['country']; ?>">

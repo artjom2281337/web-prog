@@ -3,7 +3,7 @@
     Image: <input type="text" name="img"><br>
     Price: <input type="text" name="price"><br>
     Price for Kilo: <input type="text" name="price_kilo"><br>
-    Type: <input type="text" name="type"><br>
+    Type: <input type="text" name="item_type"><br>
     Country: <input type="text" name="country"><br>
     Company: <input type="text" name="company"><br>
     Ingredients: <input type="text" name="ingred"><br>
