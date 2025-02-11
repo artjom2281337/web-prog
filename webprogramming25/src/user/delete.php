@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-$a = $_GET['id'];
+$a = $_GET['userid'];
 $result = mysqli_query($conn,"SELECT * FROM users WHERE userid= '$a'");
 $row= mysqli_fetch_array($result);
 ?>
